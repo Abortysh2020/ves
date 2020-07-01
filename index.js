@@ -386,6 +386,10 @@ p.nominalBounds = new cjs.Rectangle(-2,-2,669.5,324);
 		var weekday = d.getDay();
 		
 		
+		var hour2 = d.getUTCHours();
+		var diff = 0;
+		
+		
 		var beginSecs = 1592600417;
 		
 		
@@ -403,10 +407,22 @@ p.nominalBounds = new cjs.Rectangle(-2,-2,669.5,324);
 			minute = d.getMinutes();
 			second = d.getSeconds();
 			weekday = d.getDay();
+			hour2 = d.getUTCHours();
+			
+			if (hour != hour2) {
+				if (hour < hour2) {
+					diff = 24 + hour - hour2;
+				}
+				else {
+					diff = hour - hour2;
+				}
+			}
+			
+			
 			
 			nowSecs = d.getTime() / 1000;
 			
-			zaloopaWeight = 1000 * Math.pow(1.00000181717, (nowSecs - beginSecs));
+			zaloopaWeight = 1000 * Math.pow(1.00000181717, (nowSecs - beginSecs - 3600*diff));
 			
 			this.weigHH.text = format(zaloopaWeight)
 			
@@ -609,7 +625,7 @@ p.nominalBounds = new cjs.Rectangle(-2,-2,669.5,324);
 	this.curDD.lineHeight = 20;
 	this.curDD.lineWidth = 420;
 	this.curDD.parent = this;
-	this.curDD.setTransform(515.95,69.65,2.3506,2.3506);
+	this.curDD.setTransform(515.95,71.3,2.3506,2.3506);
 
 	this.instance = new lib.CachedBmp_3();
 	this.instance.setTransform(424.05,8.6,0.5,0.5);
@@ -620,7 +636,7 @@ p.nominalBounds = new cjs.Rectangle(-2,-2,669.5,324);
 	this.weigHH.lineHeight = 20;
 	this.weigHH.lineWidth = 160;
 	this.weigHH.parent = this;
-	this.weigHH.setTransform(506.5611,203.75,3.7402,3.7402);
+	this.weigHH.setTransform(506.5611,207.05,3.7402,3.7402);
 
 	this.instance_1 = new lib.CachedBmp_2();
 	this.instance_1.setTransform(220.1,155.15,0.5,0.5);
@@ -643,8 +659,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_.png?1593645381250", id:"index_atlas_"},
-		{src:"images/index_atlas_2.png?1593645381251", id:"index_atlas_2"}
+		{src:"images/index_atlas_.png?1593647573057", id:"index_atlas_"},
+		{src:"images/index_atlas_2.png?1593647573058", id:"index_atlas_2"}
 	],
 	preloads: []
 };
