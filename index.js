@@ -429,35 +429,35 @@ p.nominalBounds = new cjs.Rectangle(-2,-2,669.5,324);
 			this.curDD.text = getWDay(weekday) + ', ' + day + ' ' + getMName(month) + ' ' + year + ', ' + nullify1(hour) + ':' + nullify1(minute) + ':' + nullify1(second); 
 			
 			if (zaloopaWeight < 15000) {
-				this.w_machine.gotoAndStop(Math.floor(zaloopaWeight/15000*50));
+				this.w_machine.gotoAndStop(Math.floor(Math.min(49, Math.pow(zaloopaWeight/15000, 5)*800)));
 				this.w_machine.obj2.gotoAndStop(0);
 				this.w_machine.gigant.scaleX = Math.max(0.2, Math.min(2, zaloopaWeight/7500));
 				this.w_machine.gigant.scaleY = Math.max(0.2, Math.min(2, zaloopaWeight/7500));
 				this.ZLvl.text = "Уровень залупы: 2, цель - вес 2 слонов (1 слон - 7,500 КГ)"
 			}
 			else if (zaloopaWeight < 300000) {
-				this.w_machine.gotoAndStop(Math.floor(zaloopaWeight/300000*50));
+				this.w_machine.gotoAndStop(Math.floor(Math.min(49, Math.pow(zaloopaWeight/300000, 5)*800)));
 				this.w_machine.obj2.gotoAndStop(1);
 				this.w_machine.gigant.scaleX = Math.max(0.2, Math.min(2, zaloopaWeight/150000));
 				this.w_machine.gigant.scaleY = Math.max(0.2, Math.min(2, zaloopaWeight/150000));
 				this.ZLvl.text = "Уровень залупы: 3, цель - вес 2 китов (1 кит - 150,000 КГ)"
 			}
 			else if (zaloopaWeight < 720000) {
-				this.w_machine.gotoAndStop(Math.floor(zaloopaWeight/720000*50));
+				this.w_machine.gotoAndStop(Math.floor(Math.min(49, Math.pow(zaloopaWeight/720000, 5)*800)));
 				this.w_machine.obj2.gotoAndStop(2);
 				this.w_machine.gigant.scaleX = Math.max(0.2, Math.min(2, zaloopaWeight/360000));
 				this.w_machine.gigant.scaleY = Math.max(0.2, Math.min(2, zaloopaWeight/360000));
 				this.ZLvl.text = "Уровень залупы: 4, цель - вес 2 БелАЗ-75710 (1 шт - 360,000 КГ)"
 			}
 			else if (zaloopaWeight < 20200000) {
-				this.w_machine.gotoAndStop(Math.floor(zaloopaWeight/20200000*50));
+				this.w_machine.gotoAndStop(Math.floor(Math.min(49, Math.pow(zaloopaWeight/20200000, 5)*800)));
 				this.w_machine.obj2.gotoAndStop(3);
 				this.w_machine.gigant.scaleX = Math.max(0.2, Math.min(2, zaloopaWeight/10100000));
 				this.w_machine.gigant.scaleY = Math.max(0.2, Math.min(2, zaloopaWeight/10100000));
 				this.ZLvl.text = "Уровень залупы: 5, цель - вес 2 Эйфелевых башен (1 шт - 10,100 Тонн)"
 			}
 			else { //if (zaloopaWeight < 80000000)
-				this.w_machine.gotoAndStop(Math.floor(zaloopaWeight/80000000*50));
+				this.w_machine.gotoAndStop(Math.floor(Math.min(49, Math.pow(zaloopaWeight/80000000, 5)*800)));
 				this.w_machine.obj2.gotoAndStop(4);
 				this.w_machine.gigant.scaleX = Math.max(0.2, Math.min(2, zaloopaWeight/40000000));
 				this.w_machine.gigant.scaleY = Math.max(0.2, Math.min(2, zaloopaWeight/40000000));
@@ -659,8 +659,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_.png?1593648286909", id:"index_atlas_"},
-		{src:"images/index_atlas_2.png?1593648286910", id:"index_atlas_2"}
+		{src:"images/index_atlas_.png?1593648867707", id:"index_atlas_"},
+		{src:"images/index_atlas_2.png?1593648867708", id:"index_atlas_2"}
 	],
 	preloads: []
 };
