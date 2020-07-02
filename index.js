@@ -850,9 +850,9 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_.png?1593705523643", id:"index_atlas_"},
-		{src:"images/index_atlas_2.png?1593705523644", id:"index_atlas_2"},
-		{src:"images/index_atlas_3.png?1593705523644", id:"index_atlas_3"}
+		{src:"images/index_atlas_.png?1593705676708", id:"index_atlas_"},
+		{src:"images/index_atlas_2.png?1593705676708", id:"index_atlas_2"},
+		{src:"images/index_atlas_3.png?1593705676709", id:"index_atlas_3"}
 	],
 	preloads: []
 };
