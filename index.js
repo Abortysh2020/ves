@@ -554,7 +554,7 @@ p.nominalBounds = new cjs.Rectangle(-2,-2,669.5,326.4);
 			
 			nowSecs = d.getTime() / 1000;
 			
-			zaloopaWeight = 1000 * Math.pow(1.00000181717, (nowSecs - beginSecs - 3600*diff));
+			zaloopaWeight = 1000 * Math.pow(1.00000181717, (nowSecs - beginSecs));
 			
 			this.weigHH.text = format(zaloopaWeight)
 			
@@ -603,9 +603,6 @@ p.nominalBounds = new cjs.Rectangle(-2,-2,669.5,326.4);
 				this.ZLvl.text = "Уровень залупы: 6, цель - вес 2 блупов (1 блуп - 40,000 Тонн)"
 			}
 			
-			
-			this.debug1.text = "UTC : " + hour2
-			this.debug2.text = "diff : " + diff
 			
 			
 			
@@ -793,22 +790,6 @@ p.nominalBounds = new cjs.Rectangle(-2,-2,669.5,326.4);
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Слой_1
-	this.debug2 = new cjs.Text("diff : 11", "bold 15px 'Candara'");
-	this.debug2.name = "debug2";
-	this.debug2.textAlign = "center";
-	this.debug2.lineHeight = 20;
-	this.debug2.lineWidth = 100;
-	this.debug2.parent = this;
-	this.debug2.setTransform(114.2,601.35);
-
-	this.debug1 = new cjs.Text(" UTC : 11", "bold 15px 'Candara'");
-	this.debug1.name = "debug1";
-	this.debug1.textAlign = "center";
-	this.debug1.lineHeight = 20;
-	this.debug1.lineWidth = 100;
-	this.debug1.parent = this;
-	this.debug1.setTransform(114.2,579);
-
 	this.inSamokats = new cjs.Text("(Это почти как 30,101 Петиных самокатов или 61,212 моих)", "bold 15px 'Candara'");
 	this.inSamokats.name = "inSamokats";
 	this.inSamokats.textAlign = "center";
@@ -854,7 +835,7 @@ p.nominalBounds = new cjs.Rectangle(-2,-2,669.5,326.4);
 	this.instance_2 = new lib.CachedBmp_1();
 	this.instance_2.setTransform(16.85,63.95,0.5,0.5);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.weigHH},{t:this.instance},{t:this.curDD},{t:this.ZLvl},{t:this.w_machine},{t:this.inSamokats},{t:this.debug1},{t:this.debug2}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.weigHH},{t:this.instance},{t:this.curDD},{t:this.ZLvl},{t:this.w_machine},{t:this.inSamokats}]}).wait(1));
 
 	this._renderFirstFrame();
 
@@ -869,9 +850,9 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_.png?1593705011276", id:"index_atlas_"},
-		{src:"images/index_atlas_2.png?1593705011277", id:"index_atlas_2"},
-		{src:"images/index_atlas_3.png?1593705011277", id:"index_atlas_3"}
+		{src:"images/index_atlas_.png?1593705523643", id:"index_atlas_"},
+		{src:"images/index_atlas_2.png?1593705523644", id:"index_atlas_2"},
+		{src:"images/index_atlas_3.png?1593705523644", id:"index_atlas_3"}
 	],
 	preloads: []
 };
